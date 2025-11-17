@@ -1,0 +1,99 @@
+#container-main {
+  width: 80%;
+  display: flex;
+}
+.titulo-main {
+  color: #fff;
+  text-align: center;
+  padding: 1%;
+}
+.app-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+
+  padding: 5%;
+}
+.separation{
+ display: flex;
+ flex-direction: column;
+ gap: 20px;
+}
+.card {
+  width: 440px;
+  border-radius: 15px;
+  
+  position: relative;
+  text-align: justify;
+  align-items: center;
+  
+  box-shadow: inset 5px 5px 5px rgba(0,0,0,0.2),
+              inset -5px -5px 15px rgba(255,255,255,0.1),
+                    5px 5px 15px rgba(0,0,0,0.3),
+                    -5px -5px 15px rgba(255,255,255,0.1);
+}
+.card .box {
+  position: relative;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  left: 5px;
+
+  background: #0084FF;
+  border-radius: 15px;
+  padding: 10px;
+  transition: 0.5s;
+}
+.card .box:hover{
+  transform: translateY(-50px);
+}
+.card p {
+  font-size: 1.4em;
+}
+
+/* ============================
+   CHAT FIXO NO CANTO DIREITO
+============================= */
+
+.chat-wrapper {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  width: 350px;
+  max-height: 70vh;
+
+  background: #1e1e1e;
+  color: #fff;
+  border-radius: 15px;
+
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.4);
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  animation: showChat 0.3s ease-in-out;
+  z-index: 9999;
+}
+.chat-header button {
+position: absolute;
+  right: 10px;
+}
+/* animação ao abrir o chat */
+@keyframes showChat {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVIDADE MOBILE */
+@media (max-width: 768px) {
+  .chat-wrapper {
+    width: 90%;
+    right: 5%;
+    bottom: 10px;
+    max-height: 75vh;
+  }
+}

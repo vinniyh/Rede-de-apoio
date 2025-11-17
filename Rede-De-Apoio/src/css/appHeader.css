@@ -1,0 +1,112 @@
+#container-header {
+  width: 90%;
+
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  z-index: 9999; /* FICA ACIMA DE TUDO */
+}
+
+/*FORMATAÇÃO LOGO*/
+.logo-marca {
+  display: flex;
+  align-items: center;
+}
+.logo-marca img {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+  border-radius: 50%;
+}
+.logo-marca h2 {
+  color: #fff;
+}
+
+/*FORMATAÇÃO NAVEGAÇÃO*/
+.nav-bar {
+  display: flex;
+  align-items: center;
+}
+.nav-bar ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.nav-bar ul li {
+  list-style: none;
+}
+.nav-bar ul li a {
+  font-size: 1.5em;
+  color: #fff;
+}
+.nav-bar a:hover {
+  border-bottom: 2px solid #fff;
+  
+}
+
+
+/* botão hamburguer */
+.hamburger {
+  width: 35px;
+  height: 20px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 100%;
+  height: 4px;
+  background: #fff;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+/* animação ao abrir */
+.hamburger .line.active:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger .line.active:nth-child(2) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* NAV padrão desktop */
+.nav-bar ul {
+  display: flex;
+  gap: 20px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 830px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-bar {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #111;
+    width: 180px;
+    padding: 20px;
+    border-radius: 0 0 0 20px;
+
+    transform: translateX(100%);
+    transition: .3s ease;
+      z-index: 99999;
+  }
+
+  .nav-bar.open {
+    transform: translateX(0);
+  }
+
+  .nav-bar ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+

@@ -1,0 +1,42 @@
+.footer-container {
+  width: 100%;
+  background: #0f0f0f;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-top: 50px;
+  margin: 0 auto;
+}
+
+.footer-brand {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.footer-rights {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-bottom: 1rem;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-icon {
+  font-size: 1.8rem;
+  transition: 0.3s;
+  color: white;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Cores personalizadas (opcionais) */
+.social-icon.wpp { color: #25D366; }
+.social-icon.insta { color: #E1306C; }
+.social-icon .yt { color: #FF0000; }
