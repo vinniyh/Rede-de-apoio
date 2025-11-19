@@ -14,7 +14,182 @@
 }
 body {
   min-height: 100vh;
+
 }
+/* ============================
+   HEADER BASE
+============================ */
+
+#container-header {
+  width: 100%;
+  height: 80px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 5%;
+  background: #0f0f0f;
+
+  position: fixed; 
+  top: 0;
+  left: 0;
+
+  z-index: 9999;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.4);
+}
+
+/* ============================
+   LOGO
+============================ */
+
+.logo-marca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-marca img {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logo-marca h2 {
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+/* ============================
+   MENU DESKTOP
+============================ */
+
+.nav-bar {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-bar a {
+  position: relative;
+  color: #fff;
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* animação underline */
+.nav-bar a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #00c6ff;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-bar a:hover::after {
+  width: 100%;
+}
+
+/* ============================
+   BOTÃO HAMBURGUER
+============================ */
+
+.hamburger {
+  width: 35px;
+  height: 30px;
+  cursor: pointer;
+  display: none; /* só aparece no mobile */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 3px;
+  transition: 0.3s ease;
+}
+
+/* animação X */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.hamburger.active span:nth-child(2) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* ============================
+   RESPONSIVIDADE
+============================ */
+
+@media (max-width: 768px) {
+
+  /* mostra hamburguer */
+  .hamburger {
+    display: flex;
+  }
+
+  /* menu mobile */
+  .nav-bar {
+    position: absolute;
+    top: 80px;
+    right: 0;
+
+    width: 220px;
+    background: #111;
+
+    flex-direction: column;
+    padding: 1.5rem;
+
+    border-radius: 0 0 0 12px;
+    box-shadow: -2px 4px 12px rgba(0,0,0,0.5);
+
+    opacity: 0;
+    transform: translateX(60px);
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+  .nav-bar.open {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: all;
+  }
+
+  .nav-bar a {
+    font-size: 1.3rem;
+    padding: 10px 0;
+  }
+}
+/* FORÇA O MENU DESKTOP A FICAR NORMAL */
+@media (min-width: 769px) {
+  .nav-bar {
+    display: flex !important;
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+    pointer-events: all !important;
+    position: static !important;
+    width: auto !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+
+  .hamburger {
+    display: none !important;
+  }
+}
+
 a {
   font-weight: 500;
   color: #646cff;

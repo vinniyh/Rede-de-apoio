@@ -1,0 +1,67 @@
+/* Título */
+.titulo-sobre {
+  text-align: center;
+  padding: 2%;
+  color: #fff;
+  font-size: 2rem;
+  margin-top: 100px;
+}
+
+/* Container geral */
+#container-main-sobre {
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  padding-bottom: 0px; /* evita que o footer cubra conteúdo */
+}
+
+/* Seção */
+.app-section-sobre {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+}
+
+/* CARD */
+.card {
+  width: 320px;
+  height: 500px;
+  background: #ffffff10;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #0066ff;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 10px #0066ff55;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px #007bff;
+}
+
+/* Conteúdo interno */
+.box .content p {
+  color: #e3e3e3;
+  font-size: 1.05rem;
+  line-height: 1.5rem;
+}
+
+/* RESPONSIVO */
+@media (max-width: 480px) {
+  .titulo-sobre {
+    font-size: 1.7rem;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .box .content p {
+    font-size: 1rem;
+  }
+}

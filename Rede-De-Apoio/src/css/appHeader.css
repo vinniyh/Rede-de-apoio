@@ -1,112 +1,180 @@
-#container-header {
-  width: 90%;
+/* ============================
+   HEADER BASE (GLASS EFFECT)
+============================ */
 
-  margin: 0 auto;
+#container-header {
+  width: 100%;
+  height: 80px;
 
   display: flex;
   justify-content: space-between;
-  z-index: 9999; /* FICA ACIMA DE TUDO */
+  align-items: center;
+
+  padding: 0 5%;
+
+  position: fixed; 
+  top: 0;
+  left: 0;
+
+  z-index: 9999;
+
+  /* fundo transparente + blur */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
 }
 
-/*FORMATAÇÃO LOGO*/
+/* ============================
+   LOGO
+============================ */
+
 .logo-marca {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
+
 .logo-marca img {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+  height: 55px;
+  width: 55px;
   border-radius: 50%;
+  object-fit: cover;
 }
+
 .logo-marca h2 {
   color: #fff;
+  font-size: 1.3rem;
 }
 
-/*FORMATAÇÃO NAVEGAÇÃO*/
+/* ============================
+   MENU DESKTOP
+============================ */
+
 .nav-bar {
   display: flex;
+  gap: 2rem;
   align-items: center;
+  transition: 0.3s ease-in-out;
 }
-.nav-bar ul {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-.nav-bar ul li {
-  list-style: none;
-}
-.nav-bar ul li a {
-  font-size: 1.5em;
+
+.nav-bar a {
+  position: relative;
   color: #fff;
-}
-.nav-bar a:hover {
-  border-bottom: 2px solid #fff;
-  
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: 500;
 }
 
+/* underline animation */
+.nav-bar a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #00c6ff;
+  transition: width 0.3s ease-in-out;
+}
 
-/* botão hamburguer */
+.nav-bar a:hover::after {
+  width: 100%;
+}
+
+/* ============================
+   HAMBURGER BUTTON
+============================ */
+
 .hamburger {
   width: 35px;
-  height: 20px;
+  height: 30px;
+  cursor: pointer;
   display: none;
+
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  cursor: pointer;
 }
 
-.hamburger .line {
+.hamburger span {
   width: 100%;
-  height: 4px;
+  height: 3px;
   background: #fff;
-  border-radius: 5px;
-  transition: 0.3s;
+  border-radius: 3px;
+  transition: 0.3s ease;
 }
 
-/* animação ao abrir */
-.hamburger .line.active:nth-child(1) {
-  transform: translateY(10px) rotate(45deg);
+/* transform into X */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
 }
 
-.hamburger .line.active:nth-child(2) {
-  transform: translateY(-10px) rotate(-45deg);
+.hamburger.active span:nth-child(2) {
+  transform: rotate(-45deg) translateY(-8px);
 }
 
-/* NAV padrão desktop */
-.nav-bar ul {
-  display: flex;
-  gap: 20px;
-}
+/* ============================
+   RESPONSIVE
+============================ */
 
-/* RESPONSIVO */
-@media (max-width: 830px) {
+@media (max-width: 768px) {
+
   .hamburger {
     display: flex;
   }
 
   .nav-bar {
     position: absolute;
-    top: 70px;
+    top: 80px;
     right: 0;
-    background: #111;
-    width: 180px;
-    padding: 20px;
-    border-radius: 0 0 0 20px;
 
-    transform: translateX(100%);
-    transition: .3s ease;
-      z-index: 99999;
+    width: 220px;
+
+    background: rgba(10,10,10,0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    flex-direction: column;
+    padding: 1.5rem;
+
+    border-radius: 0 0 0 12px;
+    box-shadow: -2px 4px 12px rgba(0,0,0,0.5);
+
+    opacity: 0;
+    transform: translateX(60px);
+    pointer-events: none;
+    transition: all 0.3s ease;
   }
 
   .nav-bar.open {
+    opacity: 1;
     transform: translateX(0);
+    pointer-events: all;
   }
 
-  .nav-bar ul {
-    flex-direction: column;
-    gap: 15px;
+  .nav-bar a {
+    font-size: 1.3rem;
+    padding: 10px 0;
   }
 }
 
+/* FORCE DESKTOP NORMAL */
+@media (min-width: 769px) {
+  .nav-bar {
+    display: flex !important;
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+    pointer-events: all !important;
+    position: static !important;
+    width: auto !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+
+  .hamburger {
+    display: none !important;
+  }
+}
