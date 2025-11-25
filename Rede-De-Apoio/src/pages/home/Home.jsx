@@ -1,19 +1,18 @@
 
 // MEUS COMPONENTES
 import AppHeader from '../../components/Header'
-import AppMain from '../../components/Main'
-import Footer from '../../components/RodaPe'
-
+import HomeMain from '../../components/HomeMain'
+import FAQ from '../../components/Faqs'
 
 function Home() {
-
   return (
-    <>
-    <AppHeader/>
-    <AppMain/>
-    <Footer/>
-    </>
-  )
+    <div className="page-layout">
+      <AppHeader />
+      <HomeMain />
+      <FAQ />
+    </div>
+  );
 }
 
-export default Home
+export default Home;
+

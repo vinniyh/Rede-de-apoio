@@ -8,7 +8,6 @@ const Galeria = () => {
     <>
       <AppHeader/>
       <GaleriaVideos/>
-      <RodaPe/>
     </>
     
   )

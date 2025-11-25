@@ -1,22 +1,26 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { useState } from "react"
 
-// PÁGINAS REAIS DO SEU PROJETO
+// PÁGINAS DO PROJETO
 import Home from "./pages/home/Home"
 import Sobre from "./pages/sobre/Sobre"
 import Galeria from "./pages/galeria/Galeria"
 import Artigos from "./pages/artigos/Artigos"
 import FacaParte from "./pages/facaParte/FacaParte"
+import Footer from "./components/RodaPe"
 
 // COMPONENTES DO CHAT
 import Chat from "./components/Chat/Chat"
 import Join from "./components/Join/Join"
 
+// Impo
+import './css/appMain.css'
+
 function App() {
 
   const [socket, setSocket] = useState(null)
   const [chatVisibility, setChatVisibility] = useState(false)
-  const [minimized, setMinimized] = useState(false)
+  const [minimized, setMinimized] = useState(true)
 
   return (
     <BrowserRouter>
@@ -52,8 +56,9 @@ function App() {
         </div>
 
       </section>
-
+    <Footer/>
     </BrowserRouter>
+    
   )
 }
 

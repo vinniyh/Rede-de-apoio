@@ -16,7 +16,7 @@ const MainArtigos = () => {
 
   return (
     <main className="container-artigos">
-      <h1>Artigos</h1>
+      <h1>Guia do INSS</h1>
 
       <div className="carousel">
         <button className="arrow" onClick={prev}>

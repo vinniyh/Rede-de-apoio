@@ -1,47 +1,139 @@
-import '../pages/sobre/sobre.css';
+import "../pages/sobre/sobre.css";
 
-const MainSobre = () => {
+export default function MainSobre() {
   return (
     <>
-      <h1 className="titulo-sobre">Sobre nós</h1>
+      {/* HERO */}
+      <header className="sobre-hero">
+        <div className="sobre-hero-content">
+          <h1>Sobre nós</h1>
+          <p>
+            Cuidamos de quem foi surpreendido pela vida e precisa de orientação,
+            apoio e humanidade. Aqui, você não caminha sozinho(a).
+          </p>
+        </div>
+      </header>
 
-      <main id="container-main-sobre">
-        <section className="app-section-sobre">
+      <main className="sobre-container">
 
-          <div className="card">
-            <div className="box">
-              <div className="content">
-                <p>
-                  Este site nasceu da experiência de pessoas que, assim como você, precisaram enfrentar um momento inesperado da vida: um acidente, um diagnóstico difícil ou uma condição de saúde que exigiu afastamento do trabalho. Sabemos que esse processo pode ser confuso, doloroso e cheio de incertezas. Por isso, criamos este espaço com um propósito simples e ao mesmo tempo essencial: acolher, orientar e caminhar com você.
-                </p>
-              </div>
+        {/* MISSÃO / VISÃO / VALORES */}
+        <section className="mv-section fade-in">
+          <h2 className="sec-title">Nosso propósito</h2>
+
+          <div className="mv-grid">
+            <div className="mv-card">
+              <span className="mv-icon">🎯</span>
+              <h3>Missão</h3>
+              <p>
+                Ajudar pessoas afastadas ou em reabilitação a entender seus
+                direitos e encontrarem apoio emocional, jurídico e humano.
+              </p>
+            </div>
+
+            <div className="mv-card">
+              <span className="mv-icon">👁️</span>
+              <h3>Visão</h3>
+              <p>
+                Ser a maior plataforma de orientação acessível para quem depende
+                do INSS, conectando informação e acolhimento.
+              </p>
+            </div>
+
+            <div className="mv-card">
+              <span className="mv-icon">🤝</span>
+              <h3>Valores</h3>
+              <p>
+                Empatia, responsabilidade, clareza e compromisso com quem está
+                vivendo um momento difícil.
+              </p>
             </div>
           </div>
+        </section>
 
-          <div className="card">
-            <div className="box">
-              <div className="content">
-                <p>
-                  Aqui, você encontrará informações claras sobre seus direitos, etapas do processo de benefício, perícia médica, documentos necessários e tudo o que pode facilitar a sua jornada no INSS. Mas também vai encontrar algo que muitas vezes falta nesse momento: empatia, compreensão e palavras que te lembram que você não está sozinho(a).
-                </p>
-              </div>
+        {/* TIMELINE */}
+        <section className="timeline-section slide-up">
+          <h2 className="sec-title">Nossa jornada</h2>
+
+          <div className="timeline">
+
+            <div className="timeline-item">
+              <div className="timeline-dot"></div>
+              <h3>2025 — O início</h3>
+              <p>
+                Pessoas em processo de reabilitação ...
+              </p>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-dot"></div>
+              <h3>2025 — A comunidade cresce</h3>
+              <p>
+                Centenas de relatos...
+              </p>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-dot"></div>
+              <h3>2025 — Nasce a plataforma</h3>
+              <p>
+                Transformamos dor e experiência em algo maior: um espaço
+                organizado, humano e acessível.
+              </p>
+            </div>
+
+          </div>
+        </section>
+
+        {/* HISTÓRIA EM IMAGENS */}
+        <section className="story-section fade-in">
+          <h2 className="sec-title">Nossa história</h2>
+
+          <div className="story-grid">
+            <div className="story-card">
+              <img src="/sobre1.png" alt="Acolhimento" />
+              <p>
+                Este projeto nasceu de histórias reais. Pessoas que viveram
+                acidentes, diagnósticos, exames, perícias e longas esperas.
+              </p>
+            </div>
+
+            <div className="story-card">
+              <img src="/sobre2.png" alt="União" />
+              <p>
+                Reunimos conhecimento, apoio psicológico, jurídico e emocional
+                para transformar a dor em força.
+              </p>
+            </div>
+
+            <div className="story-card">
+              <img src="/sobre3.png" alt="Apoio" />
+              <p>
+                Hoje, construímos uma rede que devolve dignidade e orientação a
+                quem mais precisa.
+              </p>
             </div>
           </div>
+        </section>
 
-          <div className="card">
-            <div className="box">
-              <div className="content">
-                <p>
-                  Nosso conteúdo foi pensado para ser leve, direto e humano — porque entendemos que as dúvidas não são só burocráticas: elas mexem com a vida, com a rotina, com o emocional e com o futuro.
-                </p>
-              </div>
+        {/* EQUIPE */}
+        <section className="team-section slide-up">
+          <h2 className="sec-title">Quem faz parte</h2>
+
+          <div className="team-grid">
+            <div className="team-card">
+              <div className="avatar">A</div>
+              <h3>Arthur Vinicius</h3>
+              <p>Desenvolvedor & fundador da plataforma.</p>
+            </div>
+
+            <div className="team-card">
+              <div className="avatar">E</div>
+              <h3>Equipe de Apoio</h3>
+              <p>Colegas de classe.</p>
             </div>
           </div>
-
         </section>
       </main>
     </>
   );
-};
-
-export default MainSobre;
+}

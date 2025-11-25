@@ -1,0 +1,77 @@
+/* ============================
+   CARD DO PROFISSIONAL
+============================ */
+
+.pro-card {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #dbe7ff;
+  padding: 1rem 1.2rem;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  box-shadow: 0 4px 10px rgba(0, 60, 150, 0.05);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.pro-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0, 60, 150, 0.12);
+  border-color: #4da8ff;
+}
+
+/* Avatar circular com a inicial */
+.pro-avatar {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4da8ff, #1e6cd4);
+  color: #fff;
+
+  font-size: 1.4rem;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 3px 8px rgba(30, 108, 212, 0.25);
+}
+
+/* Informações do profissional */
+.pro-info {
+  flex: 1;
+}
+
+.pro-info strong {
+  font-size: 1.05rem;
+  color: #1c3d66;
+}
+
+.pro-info .muted {
+  font-size: 0.85rem;
+  margin-top: 2px;
+  color: #6d89b8;
+}
+
+/* Botão pequeno */
+.btn.small {
+  padding: 0.45rem 0.9rem;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  background: #1e6cd4;
+  color: #fff;
+  border: none;
+  transition: background 0.2s ease;
+  text-decoration: none;
+}
+
+.btn.small:hover {
+  background: #1557a9;
+}

@@ -29,7 +29,7 @@ const AppHeader = () => {
       <nav className={open ? "nav-bar open" : "nav-bar"}>
         <Link to="/" onClick={() => setOpen(false)}>Home</Link>
         <Link to="/sobre" onClick={() => setOpen(false)}>Sobre</Link>
-        <Link to="/artigos" onClick={() => setOpen(false)}>Artigos</Link>
+        <Link to="/artigos" onClick={() => setOpen(false)}>Guia do INSS</Link>
         <Link to="/galeria" onClick={() => setOpen(false)}>Relatos</Link>
         <Link to="/facaparte" onClick={() => setOpen(false)}>Voluntariar</Link>
       </nav>

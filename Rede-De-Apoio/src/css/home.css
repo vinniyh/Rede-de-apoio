@@ -1,0 +1,109 @@
+
+.home-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+
+
+.section {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #1c3d66;
+  margin-bottom: 0.5rem;
+}
+
+.section-sub {
+  color: #6d89b8;
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+
+
+.cards-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  padding: 0 0.5rem;
+}
+
+
+
+.find-grid {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 0 0.5rem;
+  margin-top: 2rem;
+}
+
+
+.contact-block {
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.9s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.slide-up {
+  opacity: 0;
+  animation: slideUp 0.9s ease forwards;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+  
+  .section-sub {
+    font-size: 0.95rem;
+  }
+
+  .home-main {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .section-title {
+    font-size: 1.45rem;
+  }
+}

@@ -1,0 +1,101 @@
+/* ========= HERO CONTAINER ========= */
+.hero {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 4rem 2rem;
+  margin-top: 100px;
+  background: linear-gradient(135deg, #f5faff, #e8f3ff);
+  border-radius: 0 0 20px 20px;
+  gap: 2rem;
+}
+
+/* ========= TEXTO ========= */
+.hero-content {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #003c8f;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.hero-sub {
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* ========= CTA BUTTONS ========= */
+.hero-ctas {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Botões base */
+.btn {
+  padding: 0.9rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.25s ease;
+}
+
+/* Botão principal */
+.btn.primary {
+  background: #0066ff;
+  color: #fff;
+  border: 2px solid #0066ff;
+}
+
+.btn.primary:hover {
+  background: #004fcc;
+  border-color: #004fcc;
+}
+
+/* Botão contornado */
+.btn.outline {
+  background: transparent;
+  color: #0066ff;
+  border: 2px solid #0066ff;
+}
+
+.btn.outline:hover {
+  background: #0066ff;
+  color: white;
+}
+
+/* ========= ILUSTRAÇÃO ========= */
+.hero-illustration svg {
+  max-width: 280px;
+  transition: transform 0.4s ease;
+}
+
+.hero-illustration svg:hover {
+  transform: scale(1.05);
+}
+
+/* ========= RESPONSIVIDADE ========= */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 1.5rem;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-ctas {
+    justify-content: center;
+  }
+}

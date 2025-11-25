@@ -1,0 +1,89 @@
+/* ===========================
+   CARD BASE
+=========================== */
+.card-hero {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.8rem 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 40, 120, 0.08);
+  border: 1.5px solid #e3ecf8;
+
+  cursor: pointer;
+  outline: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  transition: all 0.25s ease;
+}
+
+/* Hover + foco acessível */
+.card-hero:hover,
+.card-hero:focus {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 70, 170, 0.15);
+  border-color: #0066ff;
+}
+
+/* ===========================
+   ÍCONE
+=========================== */
+.card-icon {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+  user-select: none;
+}
+
+/* ===========================
+   TÍTULO
+=========================== */
+.card-hero h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #003c8f;
+  margin: 0;
+}
+
+/* ===========================
+   DESCRIÇÃO
+=========================== */
+.card-desc {
+  color: #555;
+  line-height: 1.5;
+  font-size: 1rem;
+  flex: 1;
+}
+
+/* ===========================
+   CALL TO ACTION
+=========================== */
+.card-cta {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: #0066ff;
+  opacity: 0.8;
+  transition: 0.25s ease;
+}
+
+/* Clicável com hover */
+.card-hero:hover .card-cta {
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+@media (max-width: 500px) {
+  .card-hero {
+    padding: 1.4rem;
+  }
+
+  .card-hero h3 {
+    font-size: 1.2rem;
+  }
+
+  .card-icon {
+    font-size: 2.1rem;
+  }
+}

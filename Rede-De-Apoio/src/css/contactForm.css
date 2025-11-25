@@ -1,0 +1,137 @@
+/* ===========================
+   SEÇÃO DO FORMULÁRIO
+=========================== */
+.contact-form {
+  background: #ffffff;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 18px rgba(0, 60, 150, 0.08);
+  border: 1px solid #e5ecf7;
+  max-width: 700px;
+  margin: 3rem auto;
+  text-align: center;
+  animation: fadeIn 0.6s ease;
+}
+
+.contact-form h2 {
+  font-size: 2rem;
+  color: #003c8f;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form .muted {
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* ===========================
+   FORMULÁRIO
+=========================== */
+.mini-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  text-align: left;
+}
+
+.mini-form label {
+  font-weight: 600;
+  color: #003c8f;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+/* ===========================
+   INPUTS / SELECT / TEXTAREA
+=========================== */
+.mini-form select,
+.mini-form textarea {
+  padding: 0.9rem 1rem;
+  border-radius: 10px;
+  border: 1.5px solid #cdd8ea;
+  background: #f8fbff;
+  outline: none;
+  font-size: 1rem;
+  resize: none;
+  transition: 0.25s ease;
+}
+
+.mini-form select:focus,
+.mini-form textarea:focus {
+  border-color: #0066ff;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(0, 110, 255, 0.15);
+}
+
+/* ===========================
+   BOTÕES
+=========================== */
+.form-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Botão padrão */
+.btn {
+  padding: 0.9rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.25s ease;
+}
+
+/* Botão principal */
+.btn.primary {
+  background: #0066ff;
+  border: 2px solid #0066ff;
+  color: white;
+}
+
+.btn.primary:hover {
+  background: #004fcc;
+  border-color: #004fcc;
+}
+
+/* Botão contornado */
+.btn.outline {
+  background: transparent;
+  border: 2px solid #0066ff;
+  color: #0066ff;
+}
+
+.btn.outline:hover {
+  background: #0066ff;
+  color: white;
+}
+
+/* ===========================
+   ANIMAÇÃO
+=========================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===========================
+   RESPONSIVIDADE
+=========================== */
+@media (max-width: 600px) {
+  .contact-form {
+    padding: 2rem 1.3rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}

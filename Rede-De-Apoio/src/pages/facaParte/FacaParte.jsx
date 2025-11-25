@@ -10,7 +10,6 @@ const FacaParte = () => {
     <>
     <AppHeader/>
     <MainFacaParte/>
-    <RodaPe/>
     </>
   )
 }
