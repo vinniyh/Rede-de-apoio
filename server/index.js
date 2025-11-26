@@ -1,8 +1,14 @@
 const app = require('express')();
 const server = require('http').createServer(app);
 const io = require('socket.io')(server, {
-  cors: { origin: 'http://localhost:5173' }
+  cors: { 
+    origin: [
+      "http://localhost:5173",
+      "https://jacki-monitorial-undesirably.ngrok-free.dev"
+    ]
+  }
 });
+
 
 const PORT = 3001;
 

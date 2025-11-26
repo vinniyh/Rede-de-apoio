@@ -1,4 +1,4 @@
-/* ===== CONTAINER GERAL (2 colunas) ===== */
+/*CONTAINER GERAL (2 colunas) */
 .relatos-page {
   display: flex;
   gap: 30px;
@@ -7,7 +7,7 @@
   background: #003399;
 }
 
-/* ===== LEFT - FORM ===== */
+/* LEFT - FORM */
 .relatos-form-container {
   width: 30%;
   background: #fff;
@@ -24,6 +24,7 @@
 }
 
 .relatos-form-container p {
+  color: #003399;
   margin-bottom: 20px;
 }
 
@@ -31,6 +32,7 @@
   font-weight: bold;
   margin-top: 15px;
   display: block;
+  color: #003399;
 }
 
 .relatos-form-container input,
@@ -71,6 +73,7 @@
 }
 
 .intro-text {
+  color: #001f66;
   margin-bottom: 25px;
 }
 
@@ -91,9 +94,12 @@
 }
 
 .card-video h3 {
+  color: #111;
   margin-bottom: 10px;
 }
-
+.card-video p {
+  color: #111;
+}
 .card-video iframe {
   width: 100%;
   height: 180px;

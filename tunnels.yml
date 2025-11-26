@@ -1,0 +1,7 @@
+tunnels:
+  server:
+    proto: http
+    addr: 3000
+  app:
+    proto: http
+    addr: 5173

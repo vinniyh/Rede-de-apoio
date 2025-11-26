@@ -1,4 +1,4 @@
-/* ===== CONTAINER GERAL ===== */
+/* CONTAINER GERAL*/
 .chat-container {
   width: 100%;
   max-width: 500px;
@@ -14,12 +14,13 @@
 .avatar {
   width: 50px;
   height: 50px;
+  margin-left: 0;
   border-radius: 50%;
-  object-fit: cover;     /* evita distorção */
-  border: 2px solid #4f46e5; /* opcional */
-  box-shadow: 0 0 8px #0003; /* opcional */
+  object-fit: cover; 
+  border: 2px solid #4f46e5; 
+  box-shadow: 0 0 8px #0003; 
 }
-/* ===== HEADER ===== */
+/* HEADER  */
 .chat-header {
   background: #282845;
   padding: 18px;
@@ -30,7 +31,7 @@
   border-bottom: 1px solid #0003;
 }
 
-/* ===== ÁREA DE MENSAGENS ===== */
+/*ÁREA DE MENSAGENS*/
 .chat-body {
   flex: 1;
   padding: 15px;
@@ -45,7 +46,7 @@
   display: none;
 }
 
-/* ===== MENSAGENS ===== */
+/*MENSAGENS*/
 .message {
   max-width: 80%;
   padding: 12px 16px;
@@ -69,7 +70,7 @@
   line-height: 1.4;
 }
 
-/* ===== MINHA MENSAGEM ===== */
+/* MINHA MENSAGEM*/
 .my-message {
   align-self: flex-end;
   background: #4f46e5;
@@ -78,7 +79,7 @@
   box-shadow: 0 0 10px #0004;
 }
 
-/* ===== MENSAGEM DO OUTRO USUÁRIO ===== */
+/* MENSAGEM DO OUTRO USUÁRIO */
 .other-message {
   align-self: flex-start;
   background: #2f2f47;
